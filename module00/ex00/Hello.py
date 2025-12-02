@@ -14,7 +14,7 @@ ft_set.discard("tutu!")
 ft_set.add("Paris!")
 
 # DICTIONARY — ordered (Python 3.7+), mutable
-ft_dict.update({"Hello" : "42Paris!"})
+ft_dict.update({"Hello": "42Paris!"})
 
 print(ft_list)
 print(ft_tuple)
