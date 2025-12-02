@@ -1,5 +1,4 @@
 import numpy as np
-# pip install numpy
 
 
 def validate_list(my_list: list[int | float], name: str):
@@ -43,6 +42,7 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     """
     try:
         validate_list(bmi, "bmi")
-        return [b > float(limit) for b in bmi]
+        limit_f = float(limit)
+        return [b > limit_f for b in bmi]
     except Exception as e:
         print(f'Error: {e}')
