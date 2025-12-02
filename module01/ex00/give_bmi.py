@@ -9,13 +9,11 @@ def validate_list(my_list: list[int | float], name: str):
         if isinstance(x, bool) or not isinstance(x, (int, float)):
             raise TypeError(f'{name} must contain only numeric values.')
         if x <= 0:
-            raise ValueError(f'{name} contains zero or negative values')
+            raise ValueError(f'{name} contains zero or negative values.')
 
 
-def give_bmi(
-    height: list[int | float],
-    weight: list[int | float]
-) -> list[int | float]:
+def give_bmi(height: list[int | float],
+             weight: list[int | float]) -> list[int | float]:
     """
     Calculates BMIs from heights(m) and weights(kg).
     BMI = weight(kg) / height(m^2)
