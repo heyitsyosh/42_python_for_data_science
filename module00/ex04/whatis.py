@@ -8,10 +8,8 @@ def what_is(num: int) -> str:
 def main(argv: list[str]):
     if len(argv) == 1:
         return
-    if len(argv) > 2:
-        raise AssertionError("more than one argument is provided")
-    if not argv[1].lstrip('-').isdigit():
-        raise AssertionError("argument is not an integer")
+    assert len(argv) <= 2, "more than one argument is provided"
+    assert argv[1].lstrip('-').isdigit(), "argument is not an integer"
     num = int(argv[1])
     print(f"I'm {what_is(num)}.")
 
@@ -19,4 +17,4 @@ def main(argv: list[str]):
 try:
     main(sys.argv)
 except AssertionError as e:
-    print(f'AssertionError: {e}')
+    print("AssertionError:", e)
