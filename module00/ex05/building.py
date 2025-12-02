@@ -4,9 +4,8 @@ import string
 
 def get_text_from_argv(argv: list[str]) -> str:
     """Return argv[1] if provided, otherwise prompt the user for input."""
-    if len(argv) > 2:
-        raise AssertionError("more than one argument is provided")
-    elif len(argv) == 2:
+    assert len(argv) <= 2, "more than one argument is provided"
+    if len(argv) == 2:
         return argv[1]
     print("What is the text to count?")
     return sys.stdin.readline()
@@ -26,7 +25,7 @@ def main():
     try:
         print_text_stats(get_text_from_argv(sys.argv))
     except AssertionError as e:
-        print(f'AssertionError: {e}')
+        print("AssertionError:", e)
 
 
 if __name__ == "__main__":
