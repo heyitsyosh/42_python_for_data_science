@@ -10,8 +10,8 @@ def zoom(img: np.ndarray,
          starting_pixel: tuple[int, int] = (450, 100)
          ) -> np.ndarray:
     """
-    Return a cropped region of `img` of size (height, width)
-    Specify starting pixel coordinates in (x, y) format
+    Returns a cropped region of `img` of size (height, width).
+    The crop begins at the specified top-left starting pixel (x, y).
     """
     x, y = starting_pixel  # top-left pixel coordinates
     h, w = img.shape[:2]
@@ -21,12 +21,12 @@ def zoom(img: np.ndarray,
 
 
 def to_grayscale(img: np.ndarray) -> np.ndarray:
-    """Convert an RGB image array to grayscale using OpenCV."""
+    """Converts an RGB image array to grayscale using OpenCV."""
     return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
 
 def display(img: np.ndarray):
-    """Display an image array using matplotlib."""
+    """Displays an image array using matplotlib."""
     plt.imshow(img, cmap='gray')
     plt.show()
     print("New shape after slicing:"
