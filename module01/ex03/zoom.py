@@ -22,15 +22,15 @@ def zoom(img: np.ndarray,
 
 def to_grayscale(img: np.ndarray) -> np.ndarray:
     """Converts an RGB image array to grayscale using OpenCV."""
-    return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+    gray_img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+    return np.atleast_3d(gray_img)  # Ensure image has a (H, W, 1) shape
 
 
 def display(img: np.ndarray) -> None:
     """Displays an image array using matplotlib."""
     plt.imshow(img, cmap='gray')
     plt.show()
-    print("New shape after slicing:"
-          f'{np.atleast_3d(img).shape} or {img.shape}')
+    print(f'New shape after slicing: {img.shape} or {img.shape[:2]}')
 
 
 def main():
