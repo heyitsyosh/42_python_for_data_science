@@ -25,7 +25,7 @@ def to_grayscale(img: np.ndarray) -> np.ndarray:
     return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
 
-def display(img: np.ndarray):
+def display(img: np.ndarray) -> None:
     """Displays an image array using matplotlib."""
     plt.imshow(img, cmap='gray')
     plt.show()

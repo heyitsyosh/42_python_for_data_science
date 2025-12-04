@@ -3,7 +3,7 @@ import string
 
 
 def get_text_from_argv(argv: list[str]) -> str:
-    """Return argv[1] if provided, otherwise prompt the user for input."""
+    """Returns argv[1] if available, or prompts user for input."""
     assert len(argv) <= 2, "more than one argument is provided"
     if len(argv) == 2:
         return argv[1]
@@ -11,7 +11,7 @@ def get_text_from_argv(argv: list[str]) -> str:
     return sys.stdin.readline()
 
 
-def print_text_stats(text: str):
+def print_text_stats(text: str) -> None:
     """ Prints characteristics of the text. """
     print(f'The text contains {len(text)} characters:')
     print(sum(1 for c in text if c.isupper()), "upper letters")
