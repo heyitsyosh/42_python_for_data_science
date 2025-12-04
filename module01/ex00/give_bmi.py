@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def validate_list(my_list: list[int | float], name: str):
+def validate_list(my_list: list[int | float], name: str) -> None:
     """Validate that the list contains only positive ints/floats"""
     if not isinstance(my_list, list):
         raise TypeError(f'{name} must be given in list format')
