@@ -1,0 +1,51 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+from load_image import ft_load
+
+
+def zoom(img: np.ndarray,
+         height: int = 400,
+         width: int = 400,
+         starting_pixel: tuple[int, int] = (450, 100)
+         ) -> np.ndarray:
+    """
+    Return a cropped region of `img` of size (height, width)
+    Specify starting pixel coordinates in (x, y) format
+    """
+    x, y = starting_pixel  # top-left pixel coordinates
+    h, w = img.shape[:2]
+    if x < 0 or y < 0 or y >= h or x >= w:
+        raise ValueError("Starting pixel is outside image bounds")
+    return img[y:y+height, x:x+width]
+
+
+def to_grayscale(img: np.ndarray) -> np.ndarray:
+    """Convert an RGB image array to grayscale using OpenCV."""
+    return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+
+
+def display(img: np.ndarray):
+    """Display an image array using matplotlib."""
+    plt.imshow(img, cmap='gray')
+    plt.show()
+    print("New shape after slicing:"
+          f'{np.atleast_3d(img).shape} or {img.shape}')
+
+
+def main():
+    try:
+        path = "../assets/animal.jpeg"
+
+        img = ft_load(path)
+        print(img)
+
+        processed_img = to_grayscale(zoom(img))
+        display(processed_img)
+        print(processed_img)
+    except Exception as e:
+        print("Error:", e)
+
+
+if __name__ == "__main__":
+    main()
