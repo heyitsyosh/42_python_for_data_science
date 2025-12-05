@@ -19,7 +19,7 @@ def ft_invert(original_img: np.ndarray) -> np.ndarray:
     """Inverts the colors of an image."""
     try:
         if not isinstance(original_img, np.ndarray):
-            raise ValueError("image must be given in array format")
+            raise TypeError("image must be given in array format")
 
         inverted_img = 255 - original_img
         show(inverted_img, "Inverted ver.")
@@ -33,7 +33,7 @@ def ft_red(original_img: np.ndarray) -> np.ndarray:
     """Applies a red filter to an image."""
     try:
         if not isinstance(original_img, np.ndarray):
-            raise ValueError("image must be given in array format")
+            raise TypeError("image must be given in array format")
         
         red_img = original_img.copy()
         red_img[:, :, (1, 2)] = 0
@@ -48,7 +48,7 @@ def ft_green(original_img: np.ndarray) -> np.ndarray:
     """Applies a green filter to an image."""
     try:
         if not isinstance(original_img, np.ndarray):
-            raise ValueError("image must be given in array format")
+            raise TypeError("image must be given in array format")
 
         green_img = original_img.copy()
         green_img[:, :, (0, 2)] = 0
@@ -63,7 +63,7 @@ def ft_blue(original_img: np.ndarray) -> np.ndarray:
     """Applies a blue filter to an image."""
     try:
         if not isinstance(original_img, np.ndarray):
-            raise ValueError("image must be given in array format")
+            raise TypeError("image must be given in array format")
 
         blue_img = original_img.copy()
         blue_img[:, :, (0, 1)] = 0
@@ -78,7 +78,7 @@ def ft_gray(original_img: np.ndarray) -> np.ndarray:
     """Applies a grayscale filter to an image."""
     try:
         if not isinstance(original_img, np.ndarray):
-            raise ValueError("image must be given in array format")
+            raise TypeError("image must be given in array format")
 
         gray_img = original_img[:, :, 1]
         show(gray_img, "Gray ver.")
