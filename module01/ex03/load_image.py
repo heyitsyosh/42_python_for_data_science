@@ -8,6 +8,6 @@ def ft_load(path: str) -> np.ndarray:
         raise ValueError(f"'{path}' is an invalid filepath")
     img = cv2.imread(path, cv2.IMREAD_COLOR_RGB)
     if img is None:
-        raise Exception('failed to read image at {path}')
+        raise ValueError(f"failed to read image at '{path}'")
     print("The shape of the image is:", img.shape)
     return img
