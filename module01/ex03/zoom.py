@@ -22,15 +22,20 @@ def zoom(img: np.ndarray,
 
 def to_grayscale(img: np.ndarray) -> np.ndarray:
     """Converts an RGB image array to grayscale using OpenCV."""
-    gray_img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-    return np.atleast_3d(gray_img)  # Ensure image has a (H, W, 1) shape
+    return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
 
-def display(img: np.ndarray) -> None:
+def show(img: np.ndarray) -> None:
     """Displays an image array using matplotlib."""
     plt.imshow(img, cmap='gray')
     plt.show()
-    print(f'New shape after slicing: {img.shape} or {img.shape[:2]}')
+
+
+def print_as_3d(img: np.ndarray) -> None:
+    """Prints the shape and contents of an array as 3D"""
+    img_3d = np.atleast_3d(img)  # Ensure image has a (H, W, 1) shape
+    (f'The shape of the image is: {img_3d.shape} or {img.shape[:2]}')
+    print(img_3d)
 
 
 def main():
@@ -41,8 +46,8 @@ def main():
         print(img)
 
         processed_img = to_grayscale(zoom(img))
-        display(processed_img)
-        print(processed_img)
+        show(processed_img)
+        print_as_3d(processed_img)
     except Exception as e:
         print("Error:", e)
 
