@@ -26,6 +26,7 @@ def to_grayscale(img: np.ndarray) -> np.ndarray:
 
 
 def transpose(img: np.ndarray) -> np.ndarray:
+    """Transposes/rotates an image"""
     rows, cols = img.shape[:2]
     transposed_img = np.empty((cols, rows), dtype=img.dtype)
 
@@ -43,9 +44,12 @@ def show(img: np.ndarray) -> None:
 
 
 def print_as_3d(img: np.ndarray) -> None:
-    """Prints the shape and contents of an array as 3D"""
+    """
+    Normalizes the input to a 3D array.
+    Then outputs its shape and contents.
+    """
     img_3d = np.atleast_3d(img)  # Ensure image has a (H, W, 1) shape
-    (f'The shape of the image is: {img_3d.shape} or {img.shape[:2]}')
+    print(f'The shape of the image is: {img_3d.shape} or {img.shape[:2]}')
     print(img_3d)
 
 
