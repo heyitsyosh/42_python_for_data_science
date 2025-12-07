@@ -7,6 +7,7 @@ def printBlue(s): print("\033[34m{}\033[00m".format(s))
 height = [2.71, 1.15]
 weight = [165.3, 38.4]
 
+printBlue("Invalid tests:")
 give_bmi(3, weight)
 give_bmi([2.71, 1.15, 3], weight)
 give_bmi([2.71, False], weight)

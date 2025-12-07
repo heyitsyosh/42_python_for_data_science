@@ -20,7 +20,6 @@ print(slice_me(family, 0, 0))
 print(slice_me([], 0, 0))
 print(slice_me([[], []], 0, 0))
 
-
 # ---- [Expected output] ----
 # $> python test_array2D.py
 # My shape is : (4, 2)

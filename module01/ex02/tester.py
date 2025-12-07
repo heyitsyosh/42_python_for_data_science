@@ -12,5 +12,5 @@ ft_load("../assets/nonexistent.jpg")
 ft_load("../assets/test.pdf")
 # ft_load("../assets/nopermissions.jpg")
 
-printBlue("Valid test(s):")
+printBlue("Valid tests:")
 print(ft_load("../assets/landscape.jpg"))
