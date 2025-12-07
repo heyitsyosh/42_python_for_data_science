@@ -80,7 +80,7 @@ def ft_gray(original_img: np.ndarray) -> np.ndarray:
         if not isinstance(original_img, np.ndarray):
             raise TypeError("image must be given in array format")
 
-        gray_img = original_img[:, :, 1]
+        gray_img = np.dot(original_img[..., :3], [0.2989, 0.5870, 0.1140])
         show(gray_img, "Gray ver.")
 
         return gray_img
