@@ -1,6 +1,5 @@
 from load_image import ft_load
 from pimp_image import show, ft_invert, ft_red, ft_green, ft_blue, ft_gray
-import matplotlib.pyplot as plt
 
 array = ft_load("../assets/landscape.jpg")
 
