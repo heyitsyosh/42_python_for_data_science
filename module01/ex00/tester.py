@@ -18,3 +18,7 @@ printBlue("Valid tests:")
 bmi = give_bmi(height, weight)
 print(bmi, type(bmi))
 print(apply_limit(bmi, 26))
+
+# ---- [Expected valid output] ----
+# [22.507863455018317, 29.0359168241966] <class 'list'>
+# [False, True]

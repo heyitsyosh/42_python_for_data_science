@@ -10,7 +10,7 @@ def validate_argv(argv: list[str]) -> None:
 
 def encode_to_morse(string: str) -> str:
     """Encodes the string into morse code"""
-    nested_morse = {
+    morse_dict = {
         " ": "/",
         # Alphabet
         "A": ".-", "B": "-...", "C": "-.-.",
@@ -37,7 +37,7 @@ def encode_to_morse(string: str) -> str:
 
     encoded = []
     for ch in string.upper():
-        encoded.append(nested_morse[ch])
+        encoded.append(morse_dict[ch])
     return ' '.join(encoded)
 
 
