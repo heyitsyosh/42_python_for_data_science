@@ -1,3 +1,7 @@
+"""
+Encode text into Morse code.
+Usage: python sos.py <text>"""
+
 import sys
 
 

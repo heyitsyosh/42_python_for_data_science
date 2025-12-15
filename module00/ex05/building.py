@@ -1,3 +1,9 @@
+"""
+Analyze a given text and print its statistics.
+Usage:
+    python building.py <text>
+    python building.py"""
+
 import sys
 import string
 
