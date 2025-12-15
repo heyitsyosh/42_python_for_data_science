@@ -14,3 +14,13 @@ ft_load("../assets/test.pdf")
 
 printBlue("Valid tests:")
 print(ft_load("../assets/landscape.jpg"))
+
+# ---- [Expected valid output] ----
+# The shape of image is: (257, 450, 3)
+# [[[19 42 83]
+# [23 42 84]
+# [28 43 84]
+# ...
+# [ 0 0 0]
+# [ 1 1 1]
+# [ 1 1 1]]]

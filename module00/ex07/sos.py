@@ -13,7 +13,7 @@ def validate_argv(args: list[str]) -> None:
 
 
 def encode_to_morse(string: str) -> str:
-    """Encodes the string into morse code"""
+    """Encodes the string into morse code."""
     morse_dict = {
         " ": "/",
         # Alphabet

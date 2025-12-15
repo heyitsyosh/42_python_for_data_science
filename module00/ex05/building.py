@@ -18,7 +18,7 @@ def get_text_from_argv(args: list[str]) -> str:
 
 
 def print_text_stats(text: str) -> None:
-    """ Prints characteristics of the text. """
+    """Prints characteristics of the text."""
     print(f'The text contains {len(text)} characters:')
     print(sum(1 for c in text if c.isupper()), "upper letters")
     print(sum(1 for c in text if c.islower()), "lower letters")

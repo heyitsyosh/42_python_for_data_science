@@ -7,8 +7,8 @@ from ft_filter import ft_filter
 
 
 def validate_args(args: list[str]) -> None:
-    """Validates that arguments are given correctly.
-    String with no special characters, integer"""
+    """Validates that arguments are given correctly:
+<string with no special characters> <integer>"""
     assert len(args) == 2, f'expected 2 arguments, got {len(args)}'
     assert all(c.isalnum() or c == ' ' for c in args[0]), \
         "first argument contains special characters"
@@ -19,7 +19,7 @@ def validate_args(args: list[str]) -> None:
 
 
 def filterstring(string: str, min_length: int):
-    """Returns words longer than the given minimum length"""
+    """Returns words longer than the given minimum length."""
     words = [word for word in string.split()]
     return ft_filter(lambda word: len(word) > min_length, words)
 

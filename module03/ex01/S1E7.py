@@ -1,4 +1,5 @@
 from S1E9 import Character
+from typing import Self
 
 
 class Baratheon(Character):
@@ -11,11 +12,11 @@ class Baratheon(Character):
         self.eyes = "brown"
         self.hairs = "dark"
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Returns a formatted string representation of the object."""
         return self.__repr__()
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Returns a formatted string representation of the object."""
         return f"Vector: {(self.family_name, self.eyes, self.hairs)}"
 
@@ -30,15 +31,18 @@ class Lannister(Character):
         self.eyes = "blue"
         self.hairs = "light"
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Returns a formatted string representation of the object."""
         return self.__repr__()
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Returns a formatted string representation of the object."""
         return f"Vector: {(self.family_name, self.eyes, self.hairs)}"
 
     @classmethod
-    def create_lannister(cls, first_name: str, is_alive: bool = True):
+    def create_lannister(cls,
+                         first_name: str,
+                         is_alive: bool = True
+                         ) -> Self:
         """Creates and returns a new instance of class 'Lannister'."""
         return cls(first_name, is_alive)
