@@ -34,7 +34,7 @@ def ft_red(original_img: np.ndarray) -> np.ndarray:
     try:
         if not isinstance(original_img, np.ndarray):
             raise TypeError("image must be given in array format")
-        
+
         red_img = original_img.copy()
         red_img[:, :, (1, 2)] = 0
         show(red_img, "Red ver.")

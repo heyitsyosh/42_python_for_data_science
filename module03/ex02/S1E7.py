@@ -1,4 +1,5 @@
 from S1E9 import Character
+from typing import Self
 
 
 class Baratheon(Character):
@@ -39,6 +40,9 @@ class Lannister(Character):
         return f"Vector: {(self.family_name, self.eyes, self.hairs)}"
 
     @classmethod
-    def create_lannister(cls, first_name: str, is_alive: bool = True):
+    def create_lannister(cls,
+                         first_name: str,
+                         is_alive: bool = True
+                         ) -> Self:
         """Creates and returns a new instance of class 'Lannister'."""
         return cls(first_name, is_alive)

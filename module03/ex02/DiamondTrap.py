@@ -8,17 +8,17 @@ class King(Baratheon, Lannister):
         super().__init__(first_name, is_alive)
 
     def set_eyes(self, color: str) -> None:
-        """Sets the eye color."""
+        """Sets eye color."""
         self.eyes = color
 
     def set_hairs(self, color: str) -> None:
-        """Sets the hair color."""
+        """Sets hair color."""
         self.hairs = color
 
     def get_eyes(self) -> str:
-        """Returns the eye color."""
+        """Returns eye color."""
         return self.eyes
 
     def get_hairs(self) -> str:
-        """Returns the hair color."""
+        """Returns hair color."""
         return self.hairs

@@ -2,10 +2,8 @@ import numpy as np
 
 
 def slice_me(family: list, start: int, end: int) -> list:
-    """
-    Slices a 2D 'family' list between start and end indices.
-    Prints the initial shape and the shape after slicing.
-    """
+    """Slices a 2D 'family' list between start and end indices.
+Prints the initial shape and the shape after slicing."""
     try:
         if not isinstance(family, list):
             raise TypeError("'family' must be in list format")

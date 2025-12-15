@@ -1,3 +1,7 @@
+"""
+Crop an image and convert it to grayscale.
+Usage: python zoom.py"""
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -9,10 +13,8 @@ def zoom(img: np.ndarray,
          width: int = 400,
          starting_pixel: tuple[int, int] = (450, 100)
          ) -> np.ndarray:
-    """
-    Returns a cropped region of `img` of size (height, width).
-    The crop begins at the specified top-left starting pixel (x, y).
-    """
+    """Returns a cropped region of `img` of size (height, width).
+The crop begins at the specified top-left starting pixel (x, y)."""
     x, y = starting_pixel  # top-left pixel coordinates
     h, w = img.shape[:2]
     if x < 0 or y < 0 or y >= h or x >= w:

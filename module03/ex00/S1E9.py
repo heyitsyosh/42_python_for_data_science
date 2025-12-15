@@ -3,26 +3,25 @@ from abc import ABC, abstractmethod
 
 class Character(ABC):
     """Abstract base class named 'Character'."""
+
     def __init__(self, first_name: str, is_alive: bool = True) -> None:
-        """
-        Character class constructor.
-        Initializes first_name (str) and is_alive (bool) status.
-        """
+        """Initializes a character."""
         self.first_name = first_name
         self.is_alive = is_alive
 
     @abstractmethod
-    def die(self):
+    def die(self) -> None:
         """Abstract method 'die' to be implemented by subclasses."""
         pass
 
 
 class Stark(Character):
-    """Inherited class named 'Stark'"""
+    """Inherited class named 'Stark'."""
+
     def __init__(self, first_name: str, is_alive: bool = True) -> None:
-        """Stark class constructor"""
+        """Initializes a Stark character."""
         super().__init__(first_name, is_alive)
 
-    def die(self):
+    def die(self) -> None:
         """Sets the is_alive parameter to false."""
         self.is_alive = False
