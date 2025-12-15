@@ -1,10 +1,10 @@
 import sys
 
 
-def validate_argv(argv: list[str]) -> None:
+def validate_argv(args: list[str]) -> None:
     """Validates that argv contains a single alphanumeric argument string."""
-    assert len(argv) == 2, "wrong number of arguments, must be one"
-    assert all(ch.isalnum() or ch == ' ' for ch in argv[1]), \
+    assert len(args) == 1, "wrong number of arguments, must be one"
+    assert all(ch.isalnum() or ch == ' ' for ch in args[0]), \
         "only alphanumeric characters are allowed"
 
 
@@ -45,7 +45,7 @@ def main():
     if len(sys.argv) < 2:
         return
     try:
-        validate_argv(sys.argv)
+        validate_argv(sys.argv[1:])
         morse_translation = encode_to_morse(sys.argv[1])
         print(morse_translation)
     except AssertionError as e:
