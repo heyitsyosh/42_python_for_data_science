@@ -2,11 +2,11 @@ import sys
 import string
 
 
-def get_text_from_argv(argv: list[str]) -> str:
+def get_text_from_argv(args: list[str]) -> str:
     """Returns argv[1] if available, or prompts user for input."""
-    assert len(argv) <= 2, "more than one argument is provided"
-    if len(argv) == 2:
-        return argv[1]
+    assert len(args) < 2, "more than one argument is provided"
+    if len(args) == 1:
+        return args[0]
     print("What is the text to count?")
     return sys.stdin.readline()
 
@@ -23,7 +23,7 @@ def print_text_stats(text: str) -> None:
 
 def main():
     try:
-        print_text_stats(get_text_from_argv(sys.argv))
+        print_text_stats(get_text_from_argv(sys.argv[1:]))
     except AssertionError as e:
         print("AssertionError:", e)
 
