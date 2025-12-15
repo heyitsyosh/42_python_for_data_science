@@ -1,3 +1,7 @@
+"""
+Filter words in a text by minimum length.
+Usage: python filterstring.py <text> <min_length>"""
+
 import sys
 from ft_filter import ft_filter
 
@@ -14,10 +18,10 @@ def validate_args(args: list[str]) -> None:
         assert False, f'second argument must be an integer, got {args[1]!r}'
 
 
-def filterstring(string: str, min_len: int):
+def filterstring(string: str, min_length: int):
     """Returns words longer than the given minimum length"""
     words = [word for word in string.split()]
-    return ft_filter(lambda word: len(word) > min_len, words)
+    return ft_filter(lambda word: len(word) > min_length, words)
 
 
 def main():

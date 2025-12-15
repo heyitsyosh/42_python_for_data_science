@@ -1,3 +1,7 @@
+"""
+Determine whether a given integer is even or odd.
+Usage: python whatis.py <integer>"""
+
 import sys
 
 
