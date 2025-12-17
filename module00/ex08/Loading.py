@@ -8,7 +8,7 @@ def small_bar(ratio: float) -> None:
     return blocks[i]
 
 
-def ft_tqdm(lst: range) -> None:
+def ft_tqdm(lst: range) -> None:  # type: ignore
     """Self implementation of tqdm (https://github.com/tqdm/tqdm).
 A progressbar decorator for iterators."""
     lst_len = len(lst)
