@@ -23,4 +23,5 @@ A progressbar decorator for iterators."""
             filled = int(ratio * bar_width)
             bar = "█" * filled + " " * (bar_width - filled)
         print(f"\r{ratio * 100:3.0f}%|{bar}| {i}/{lst_len}", end='')
-        yield
+        yield item
+    print()
