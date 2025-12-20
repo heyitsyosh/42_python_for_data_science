@@ -10,12 +10,12 @@ def what_is(num: int) -> str:
 
 
 def main(args: list[str]):
-    if len(args) == 0:
-        return
     assert len(args) < 2, "more than one argument is provided"
-    assert args[0].lstrip('-').isdigit(), "argument is not an integer"
-    num = int(args[0])
-    print(f"I'm {what_is(num)}.")
+    if len(args) != 0:
+        assert args[0].lstrip('-').isdigit(), "argument is not an integer"
+        num = int(args[0])
+        print(f"I'm {what_is(num)}.")
+    print()
 
 
 try:
