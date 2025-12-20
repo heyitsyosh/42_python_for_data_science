@@ -14,5 +14,5 @@ def NULL_not_found(object: any) -> int:
         print("Type not found")
         return 1
 
-    print(f'{name}:', f'{object} {type(object)}')
+    print(f'{name}: {object} {type(object)}')
     return 0

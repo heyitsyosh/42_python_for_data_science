@@ -1,13 +1,9 @@
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "ft_package"
-version = "0.0.1"
+dynamic = ["version"]
+description = "A sample test package"
 authors = [
-  {name="myoshika"},
-  {email="myoshika@42.fr"},
+  {name="myoshika", email="myoshika@42.fr"},
 ]
 license = "MIT"
 license-files = ["LICENSE*"]
@@ -17,8 +13,9 @@ requires-python = ">=3.10"
 [project.urls]
 'home-page' = 'https://github.com/myoshika/ft_package'
 
-[tool.setuptools]
-package-dir = {"" = "src"}
+[tool.setuptools.dynamic]
+version.attr = "ft_package.__version__"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
