@@ -1,5 +1,5 @@
 <h1 align="center">
-	Python Module 0 - Starting
+	Python Module 00
 </h1>
 
 *<p align="center">Basic Python syntax, data types, and standard libraries</p>*
@@ -25,7 +25,7 @@ python <filename>.py
 **ex03**: Classify null-like objects (`None`, `NaN`, `0`, `""`, `False`).  
 **ex04**: Take a command-line argument and determine whether it is even or odd.  
 **ex05**: Analyze text input and compute character statistics.  
-**ex06**: Filter words using a lambda function and iterable conversion.  
+**ex06**: Filter words using a `lambda function` and list conversion.  
 **ex07**: Encode a string into Morse code.  
 **ex08**: Reimplement a tqdm-style progress bar.  
 **ex09**: Create a custom python package.
