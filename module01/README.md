@@ -21,7 +21,7 @@ python <filename>.py
 ## Overview of exercise objectives:
 **ex00**: Introduction to NumPy arrays.  
 **ex01**: Slice 2D NumPy arrays.  
-**ex02**: Load images into NumPy arrays using OpenCV.  
+**ex02**: Load images into NumPy arrays using `OpenCV`.  
 **ex03**: Crop images and convert them to grayscale.  
 **ex04**: Rotate images through array transposition.  
 **ex05**: Apply color filters and inversion.
