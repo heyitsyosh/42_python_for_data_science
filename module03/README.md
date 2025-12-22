@@ -1,5 +1,5 @@
 <h1 align="center">
-	Python Module 3
+	Python Module 03
 </h1>
 
 *<p align="center">Classes and heritage</p>*

@@ -28,4 +28,4 @@ python <filename>.py
 **ex06**: Filter words using a `lambda function` and list conversion.  
 **ex07**: Encode a string into Morse code.  
 **ex08**: Reimplement a tqdm-style progress bar.  
-**ex09**: Create a custom python package.
+**ex09**: Create a custom Python package.
