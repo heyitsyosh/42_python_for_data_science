@@ -1,9 +1,9 @@
 <h1 align="center">
-	python for data science
+	Python for data science
 </h1>
 
 ## Description:
-Five modules that introduce various python concepts through excercises.  
+Five modules that introduce various Python concepts through exercises.  
 
 ## Module overview:
 | Module | Concepts covered |
