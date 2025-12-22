@@ -1,5 +1,5 @@
 <h1 align="center">
-	Python Module 0 - Arrays
+	Python Module 01
 </h1>
 
 *<p align="center">Image transformation using NumPy arrays and OpenCV</p>*
