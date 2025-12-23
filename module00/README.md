@@ -19,13 +19,15 @@ python <filename>.py
 ```
 
 ## Overview of exercise objectives:
-**ex00**: Create a Hello world variation that introduces basic Python collections.  
-**ex01**: Use the `time` and `datetime` libraries.  
-**ex02**: Classify various Python objects.  
-**ex03**: Classify null-like objects (`None`, `NaN`, `0`, `""`, `False`).  
-**ex04**: Take a command-line argument and determine whether it is even or odd.  
-**ex05**: Analyze text input and compute character statistics.  
-**ex06**: Filter words using a `lambda function` and list conversion.  
-**ex07**: Encode a string into Morse code.  
-**ex08**: Reimplement a tqdm-style progress bar.  
-**ex09**: Create a custom Python package.
+| # | Objective |
+|:---:|:---|
+ex00 | Create a Hello world variation that introduces basic Python collections. |
+ex01 | Use the `time` and `datetime` libraries. |
+ex02 | Classify various Python objects. |
+ex03 | Classify null-like objects (`None`, `NaN`, `0`, `""`, `False`). |
+ex04 | Take a command-line argument and determine whether it is even or odd. |
+ex05 | Analyze text input and compute character statistics. |
+ex06 | Filter words using a `lambda function` and list conversion. |
+ex07 | Encode a string into Morse code. |
+ex08 | Reimplement a tqdm-style progress bar. |
+ex09 | Create a custom Python package. |
