@@ -14,7 +14,7 @@ Prints the initial shape and the shape after slicing."""
         if any(not isinstance(row, list) for row in family):
             raise TypeError("'family' must contain only lists")
         if family and any(len(row) != len(family[0]) for row in family):
-            raise ValueError("lists in 'family' must have equa lengths")
+            raise ValueError("lists in 'family' must have equal lengths")
 
         array = np.asarray(family)
         print(f'My shape is: {array.shape}')
