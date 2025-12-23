@@ -2,14 +2,10 @@
 	Python Module 03
 </h1>
 
-*<p align="center">Classes and heritage</p>*
+*<p align="center">Classes, inheritance, magic methods</p>*
 
 ## Set-up/Compilation:
-First, install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
-Then enter any exercise directory with `cd ex<..>`.  
+Enter any exercise directory with `cd ex<..>`.  
 Run `tester.py` if available.  
 Otherwise, execute the file containing `main`:
 ```python
