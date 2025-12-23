@@ -7,7 +7,7 @@ Five modules that introduce various Python concepts through exercises.
 
 ## Overview:
 | Module | Concepts covered |
----|---|
+:---:|:---|
 [**00**](https://github.com/heyitsyosh/42_python_for_data_science/tree/master/module00#readme) | Python specific syntax, data types, standard libraries |
 [**01**](https://github.com/heyitsyosh/42_python_for_data_science/tree/master/module01#readme) | NumPy array manipulation, openCV image processing, Matplotlib data visualization |
 [**02**](https://github.com/heyitsyosh/42_python_for_data_science/tree/master/module02#readme) |  |
