@@ -5,7 +5,7 @@
 ## Description:
 Five modules that introduce various Python concepts through exercises.  
 
-## Module overview:
+## Overview:
 | Module | Concepts covered |
 ---|---|
 [**00**](https://github.com/heyitsyosh/42_python_for_data_science/tree/master/module00#readme) | Python specific syntax, data types, standard libraries |
