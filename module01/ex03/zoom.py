@@ -18,7 +18,7 @@ The crop begins at the specified top-left starting pixel (x, y)."""
     x, y = starting_pixel  # top-left pixel coordinates
     h, w = img.shape[:2]
     if x < 0 or y < 0 or y >= h or x >= w:
-        raise ValueError("Starting pixel is outside image bounds")
+        raise ValueError("starting pixel is outside image bounds")
     return img[y:y+height, x:x+width]
 
 
