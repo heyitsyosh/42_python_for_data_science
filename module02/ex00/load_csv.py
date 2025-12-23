@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def load(path: str) -> pd.core.frame.DataFrame:
-    """Loads and returns the data set found in the given path."""
+    """Loads a dataset from the given path and returns it as a DataFrame."""
     try:
         df = pd.read_csv(path)
         print("Loading dataset of dimensions", df.shape)

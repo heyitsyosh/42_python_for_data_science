@@ -16,7 +16,7 @@ Prints the initial shape and the shape after slicing."""
         if family and any(len(row) != len(family[0]) for row in family):
             raise ValueError("lists in 'family' must have equal lengths")
 
-        array = np.asarray(family)
+        array = np.asarray(family, dtype=float)
         print(f'My shape is: {array.shape}')
         sliced = array[start:end]
         print(f'My new shape is: {sliced.shape}')
