@@ -52,6 +52,8 @@ def main():
         print_as_3d(processed_img)
     except Exception as e:
         print("Error:", e)
+    except KeyboardInterrupt:
+        print("Keyboard interruption detected")
 
 
 if __name__ == "__main__":
