@@ -70,8 +70,6 @@ def main():
         print(transposed_img)
     except Exception as e:
         print("Error:", e)
-    except KeyboardInterrupt:
-        print("Keyboard interruption detected")
 
 
 if __name__ == "__main__":
