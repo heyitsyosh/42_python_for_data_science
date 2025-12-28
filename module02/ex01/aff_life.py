@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
 
-def visualize_france_data(df: pd.core.frame.DataFrame) -> None:
+def visualize_france_data(df: pd.DataFrame) -> None:
     """"Plots France's life expectancy over time."""
     ax = plt.subplot()
     france_data = df.loc[df["country"] == "France"]

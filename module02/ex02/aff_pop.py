@@ -1,5 +1,5 @@
-"""Visualize life expectancy projections for two countries.
-Data is extracted from a CSV containing life expectancy by country and year."""
+"""Visualize population projections for two countries.
+Data is extracted from a CSV containing population by country and year."""
 
 from load_csv import load
 import pandas as pd

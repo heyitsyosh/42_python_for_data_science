@@ -26,7 +26,7 @@ def main():
             xticks=[300, 1000, 10000]
         )
         ax.xaxis.set_major_formatter(
-            lambda x, pos: f'{x/1000:g}k' if x >= 1000 else x
+            lambda x, _: f'{x/1000:.0f}k' if x >= 1000 else x
         )
         plt.show()
     except Exception as e:

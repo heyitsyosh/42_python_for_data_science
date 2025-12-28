@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def load(path: str) -> pd.core.frame.DataFrame:
+def load(path: str) -> pd.DataFrame:
     """Loads a dataset from the given path and returns it as a DataFrame."""
     try:
         df = pd.read_csv(path)
