@@ -35,10 +35,10 @@ def ft_median(data: list[int | float]) -> int | float:
     return sorted_data[middle]
 
 
-def ft_quartile(data: list[int | float]) -> int | float:
+def ft_quartile(data: list[int | float]) -> list[int | float]:
     """Returns the values at the lower and upper quartile indices."""
     if len(data) < 2:
-        raise ValueError('dataset too small for quartiles')
+        raise ValueError("dataset too small for quartiles")
 
     sorted_data = sorted(data)
     q1 = sorted_data[int(len(data) / 4)]
