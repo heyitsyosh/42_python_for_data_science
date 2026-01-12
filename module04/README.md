@@ -19,7 +19,9 @@ python <filename>.py
 ```
 
 ## Overview of exercise objectives:
-**ex00**:  
-**ex01**: 
-**ex02**: 
-**ex03**:
+| # | Objective |
+|:---:|:---|
+ex00 | Process `*args` and `**kwargs` to compute statistics. |
+ex01 | Implement a stateful function that applies another function more times on each call. |
+ex02 | Implement a call-limiting `decorator factory`. |
+ex03 | Use the `dataclass` library to define a 'Student' class. |
