@@ -1,3 +1,6 @@
+from typing import Callable
+
+
 def square(x: int | float) -> int | float:
     """Returns the square of a number."""
     return x * x
@@ -8,7 +11,7 @@ def pow(x: int | float) -> int | float:
     return x ** x
 
 
-def outer(x: int | float, function) -> object:
+def outer(x: int | float, function: Callable) -> Callable:
     """Creates a closure that lets 'count' persist between calls."""
     count = 0
 
