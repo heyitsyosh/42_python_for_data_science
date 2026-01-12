@@ -1,10 +1,23 @@
-def square(x: int | float)-> int | float:
-    #your code here
+def square(x: int | float) -> int | float:
+    """Returns the square of a number."""
+    return x * x
 
-def pow(x: int | float)-> int | float:
-    #your code here
 
-def outer(x: int | float, function)-> object:
-        count = 0
-    def inner()-> float:
-        # your code here
+def pow(x: int | float) -> int | float:
+    """Returns a number raised to the power of itself."""
+    return x ** x
+
+
+def outer(x: int | float, function) -> object:
+    """Creates a closure that lets 'count' persist between calls."""
+    count = 0
+
+    def inner() -> float:
+        """Applies 'function' to 'x' as many times as the call count."""
+        nonlocal count
+        result = function(x)
+        for _ in range(count):
+            result = function(result)
+        count += 1
+        return result
+    return inner
