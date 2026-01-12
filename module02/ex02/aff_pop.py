@@ -4,7 +4,7 @@ Data is extracted from a CSV containing population by country and year."""
 from load_csv import load
 import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib.axes import Axes  # for type hint
+from matplotlib.axes import Axes
 import matplotlib.ticker as ticker
 
 
