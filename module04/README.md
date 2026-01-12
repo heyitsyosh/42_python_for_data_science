@@ -5,10 +5,6 @@
 *<p align="center">Data Oriented Design</p>*
 
 ## Set-up/Compilation:
-First, install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
 Then enter any exercise directory with `cd ex<..>`.  
 Run `tester.py` if available.  
 Otherwise, execute the file containing `main`:
