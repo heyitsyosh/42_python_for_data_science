@@ -9,7 +9,8 @@ ft_statistics(1, 2, 3, 4, 5, 6, 7, 8, tata="quartile")
 print("-----")
 ft_statistics(5, 75, 450, 18, 597, 27474, 48575, hello="std", world="var")
 print("-----")
-ft_statistics(5, 75, 450, 18, 597, 27474, 48575, ejfhhe="heheh", ejdjdejn="kdekem")
+ft_statistics(5, 75, 450, 18, 597, 27474, 48575,
+              ejfhhe="heheh", ejdjdejn="kdekem")
 ft_statistics(toto="mean", tutu="median", tata="quartile")
 
 # ---- [Expected output] ----
