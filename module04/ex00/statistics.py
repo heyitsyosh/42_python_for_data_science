@@ -5,11 +5,11 @@ def validate_and_convert_to_list(args: tuple[Any, ...]) -> list[float]:
     """Validates that dataset only contains numbers.
 Then returns the dataset as a list."""
     if len(args) == 0:
-        raise ValueError("no dataset provided")
+        return None
     ret = []
     for x in args:
         if isinstance(x, bool) or not isinstance(x, (int, float)):
-            raise TypeError("dataset must contain only numbers")
+            return None
         ret.append(x)
     return ret
 
@@ -68,22 +68,22 @@ Parameters:
 
 Example:
     ft_statistics(1, 2, 3, 4, a="mean", b="median")"""
-    try:
-        data = validate_and_convert_to_list(args)
-        for _, value in kwargs.items():
-            match value:
-                case "mean":
-                    print(f'mean : {ft_mean(data)}')
-                case "median":
-                    print(f'mean : {ft_median(data)}')
-                case "quartile":
-                    quartiles = ft_quartile(data)
-                    print(f'quartile : {[float(x) for x in quartiles]}')
-                case "std":
-                    print(f'std : {ft_std(data)}')
-                case "var":
-                    print(f'var : {ft_variance(data)}')
-                case _:
-                    raise ValueError(f"'{value}' is an invalid measure")
-    except Exception as e:
-        print("Error:", e)
+    data = validate_and_convert_to_list(args)
+    for _, value in kwargs.items():
+        if data is None:
+            print("Error")
+            continue
+        match value:
+            case "mean":
+                print(f'mean : {ft_mean(data)}')
+            case "median":
+                print(f'mean : {ft_median(data)}')
+            case "quartile":
+                quartiles = ft_quartile(data)
+                print(f'quartile : {[float(x) for x in quartiles]}')
+            case "std":
+                print(f'std : {ft_std(data)}')
+            case "var":
+                print(f'var : {ft_variance(data)}')
+            case _:
+                pass
