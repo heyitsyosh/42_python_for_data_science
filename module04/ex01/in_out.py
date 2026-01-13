@@ -15,12 +15,12 @@ def outer(x: int | float, function: Callable) -> Callable:
     """Creates a closure that lets 'count' persist between calls."""
     count = 0
 
-    def inner() -> float:
+    def inner() -> int | float:
         """Applies 'function' to 'x' as many times as the call count."""
         nonlocal count
         result = function(x)
         for _ in range(count):
             result = function(result)
         count += 1
-        return result
+        return float(result)
     return inner
